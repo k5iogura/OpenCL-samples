@@ -15,11 +15,6 @@
 //#define 
 
 char BufferError[ERROR_LEN];
-cl_int status;
-cl_context g_context;
-cl_command_queue g_queue;
-cl_program program;
-
 
 void checkErr(cl_int err,const char *name)
 {
@@ -115,12 +110,18 @@ char* ReadSources(const char* fileName)
 	return src;
 }
 
-int openCLCreate(cl_context* context,cl_command_queue* queue,const char* inputfile)
+int openCLCreate(cl_context* context, cl_command_queue* queue, cl_device_id *device)
 {
 	cl_int status;
 	cl_platform_id platform=NULL;
-	cl_device_id *device;
+	cl_device_id *devices;
+    cl_program program;
 	cl_uint numPlatforms,numdevices;
+
+    // Please Select One Platform to use in list below !
+    char *use_platform="NVIDIA Corporation";
+    //char *use_platform="Intel(R) Corporation";
+    //char *use_platform="Advanced Micro Devices,Inc.";
 
 	status=clGetPlatformIDs(0,NULL,&numPlatforms);
 	checkErr(status,"clGetPlatformIDs()");
@@ -143,43 +144,52 @@ int openCLCreate(cl_context* context,cl_command_queue* queue,const char* inputfi
 					pbuff,
 					NULL
 					);
-			platform=platforms[i];
-			if(!strcmp(pbuff,"Advanced Micro Devices,Inc."))
-			{
-				break;
-			} 
+            if(1) printf("%s",pbuff);
+			if(!strcmp(pbuff,use_platform)) {
+                printf(" <-- To Use\n");
+                platform=platforms[i];
+            } else {
+                if(1) printf("\n");
+            }
 		}
-		delete platforms;
 	}
 
-	status=clGetDeviceIDs(platform,CL_DEVICE_TYPE_GPU,0,NULL,&numdevices);
+	status=clGetDeviceIDs(platform,CL_DEVICE_TYPE_ALL,0,NULL,&numdevices);
 	checkErr(status,"clGetDeviceIDs()");
 
-	device=(cl_device_id *)malloc(numdevices*sizeof(cl_device_id));
-	status=clGetDeviceIDs(platform,CL_DEVICE_TYPE_GPU,numdevices,device,NULL);
+	devices=(cl_device_id *)malloc(numdevices*sizeof(cl_device_id));
+	status=clGetDeviceIDs(platform,CL_DEVICE_TYPE_ALL,numdevices,devices,NULL);
+    if(numdevices>1){printf("Warning: %d Devices found\n",numdevices);}
 
-	*context=clCreateContext(NULL,numdevices,device,NULL,NULL,&status);
+	*context=clCreateContext(NULL,numdevices,devices,NULL,NULL,&status);
 	checkErr(status,"clCreateContext()");
 
-	*queue=clCreateCommandQueue(*context,device[1],CL_QUEUE_PROFILING_ENABLE,&status);
+	*queue=clCreateCommandQueue(*context,devices[0],CL_QUEUE_PROFILING_ENABLE,&status);
 	checkErr(status,"clCreateCommandQueue()");
 
+    *device = devices[0];
+    return 0;
+
+}
+
+int openCLCreate_Stage2(cl_context context, cl_device_id Device, char *inputfile)
+{
+    cl_int status;
 	char *program_source=ReadSources((const char*)inputfile);
 
-	program=clCreateProgramWithSource(g_context,1,(const char**)&program_source,NULL,&status);
+	cl_program program=clCreateProgramWithSource(context,1,(const char**)&program_source,NULL,&status);
 	checkErr(status,"clCreateProgramWithSource");
 
-	status=clBuildProgram(program,1,&device[1],NULL,NULL,NULL);
+	status=clBuildProgram(program,1,&Device,NULL,NULL,NULL);
 
 	if(status !=CL_SUCCESS)
 	{
 		printf("Error: build kernel fails\n");
 		size_t len;
-		clGetProgramBuildInfo(program,*device,CL_PROGRAM_BUILD_LOG,sizeof(BufferError),BufferError,&len);
+		clGetProgramBuildInfo(program,Device,CL_PROGRAM_BUILD_LOG,sizeof(BufferError),BufferError,&len);
 		BufferError[len]='\0';
 		printf("%s",BufferError);
 		checkErr(status,"clBuildProgram");
-		getchar();
 		return -1;
 	}
 
