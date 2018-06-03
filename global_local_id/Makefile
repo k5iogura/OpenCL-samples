@@ -1,8 +1,9 @@
-SRC:= work.c CLutil.h
+SRC:= work.c
+INC:= $(wildcard ../common/*.h)
 KRL:= kernel.cl
-CFLAGS := -std=c99 -I/usr/local/cuda-9.0/include/
+CFLAGS := -std=c99 -I../common/ -I/usr/local/cuda-9.0/include/
 LDFLAGS:= -L/usr/local/cuda-9.0/lib64/ -lOpenCL
-work: Makefile $(SRC) $(KRL)
+work: Makefile $(SRC) $(KRL) $(INC)
 	gcc -std=c99 $(SRC) $(CFLAGS) $(LDFLAGS) -o $@
 
 clean:
