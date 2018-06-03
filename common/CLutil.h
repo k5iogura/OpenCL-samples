@@ -119,8 +119,9 @@ int openCLCreate(cl_context* context, cl_command_queue* queue, cl_device_id *dev
 	cl_uint numPlatforms,numdevices;
 
     // Please Select One Platform to use in list below !
-    char *use_platform="NVIDIA Corporation";
-    //char *use_platform="Intel(R) Corporation";
+    //char *use_platform="NVIDIA Corporation";
+    //char *use_platform="Intel(R) FPGA OpenCL platform";
+    char *use_platform="Intel(R) Corporation";
     //char *use_platform="Advanced Micro Devices,Inc.";
 
 	status=clGetPlatformIDs(0,NULL,&numPlatforms);
@@ -172,7 +173,7 @@ int openCLCreate(cl_context* context, cl_command_queue* queue, cl_device_id *dev
 
 }
 
-int openCLCreate_Stage2(cl_context context, cl_device_id Device, char *inputfile)
+int openCLCreate_Stage2(cl_context context, cl_device_id Device, char *inputfile, char* kernel_name, cl_kernel* kernel)
 {
     cl_int status;
 	char *program_source=ReadSources((const char*)inputfile);
@@ -192,6 +193,10 @@ int openCLCreate_Stage2(cl_context context, cl_device_id Device, char *inputfile
 		checkErr(status,"clBuildProgram");
 		return -1;
 	}
+
+    //const char *kernel_name = "id";
+    *kernel = clCreateKernel(program, kernel_name, &status);
+	checkErr(status,"clCreateKernel");
 
 	return 0;
 }
