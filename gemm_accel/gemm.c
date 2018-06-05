@@ -66,20 +66,13 @@ void gemm_nn_accel(int M, int N, int K,
                 checkErr(ret,"clEnqueueWriteBuffer-5");
                 ret|=clEnqueueWriteBuffer(queue, A_PARTcl, CL_TRUE, 0, sizeof(float), (void*)&A_PART, 0, NULL, NULL);
                 checkErr(ret,"clEnqueueWriteBuffer-4");
-                ret|=clSetKernelArg(kernel, 0, sizeof(cl_mem), (void*)&icl);
-                checkErr(ret,"SetKernelArg-0");
-                ret|=clSetKernelArg(kernel, 1, sizeof(cl_mem), &kcl);
-                checkErr(ret,"SetKernelArg-1");
-                ret|=clSetKernelArg(kernel, 2, sizeof(cl_mem), &ldccl);
-                checkErr(ret,"SetKernelArg-2");
-                ret|=clSetKernelArg(kernel, 3, sizeof(cl_mem), &ldbcl);
-                checkErr(ret,"SetKernelArg-3");
-                ret|=clSetKernelArg(kernel, 4, sizeof(cl_mem), (void*)&Ccl);
-                checkErr(ret,"SetKernelArg-4");
-                ret|=clSetKernelArg(kernel, 5, sizeof(cl_mem), (void*)&Bcl);
-                checkErr(ret,"SetKernelArg-5");
-                ret|=clSetKernelArg(kernel, 6, sizeof(cl_mem), (void*)&A_PARTcl);
-                checkErr(ret,"SetKernelArg-6");
+                ret|=clSetKernelArg(kernel, 0, sizeof(cl_mem), (void*)&icl); checkErr(ret,"SetKernelArg-0");
+                ret|=clSetKernelArg(kernel, 1, sizeof(cl_mem), &kcl);        checkErr(ret,"SetKernelArg-1");
+                ret|=clSetKernelArg(kernel, 2, sizeof(cl_mem), &ldccl);      checkErr(ret,"SetKernelArg-2");
+                ret|=clSetKernelArg(kernel, 3, sizeof(cl_mem), &ldbcl);      checkErr(ret,"SetKernelArg-3");
+                ret|=clSetKernelArg(kernel, 4, sizeof(cl_mem), (void*)&Ccl); checkErr(ret,"SetKernelArg-4");
+                ret|=clSetKernelArg(kernel, 5, sizeof(cl_mem), (void*)&Bcl); checkErr(ret,"SetKernelArg-5");
+                ret|=clSetKernelArg(kernel, 6, sizeof(cl_mem), (void*)&A_PARTcl); checkErr(ret,"SetKernelArg-6");
                 //ret|=clEnqueueTask(queue,kernel,0,NULL,NULL);
                 g_work_size = l_work_size = N;
                 ret|=clEnqueueNDRangeKernel(queue,kernel,1,0,&g_work_size,&l_work_size,0,NULL,NULL);
@@ -88,11 +81,11 @@ void gemm_nn_accel(int M, int N, int K,
                     clFinish(queue);
                 }else
                     printf("clSetKernelArg or any error\n");
+                ret = clEnqueueReadBuffer(queue, Ccl, CL_TRUE, 0, M*N*sizeof(float), (void*)C, 0, NULL, NULL);
+                checkErr(ret,"clEnqueueReadBuffer-0");
 //            }
         }
     }
-    ret = clEnqueueReadBuffer(queue, Ccl, CL_TRUE, 0, M*N*sizeof(float), (void*)C, 0, NULL, NULL);
-    checkErr(ret,"clEnqueueReadBuffer-0");
     for(i=0;i<8;i++)printf("B[%d]=%5.2f\t",i,B[i]);
     for(i=0;i<8;i++)printf("C[%d]=%5.2f\t",i,C[i]);
     printf("\n");

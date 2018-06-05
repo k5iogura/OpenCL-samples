@@ -14,8 +14,7 @@ __kernel void gemm_nn(
     int ldb = *p_ldb;
     float A_PART=*A;
     C[i*ldc+j] +=A_PART * B[k*ldb+j];
-    printf("C- %d-%d-%d %f \n",i,k,j, C[i*ldc+j]);
-    printf("B- %d-%d-%d %f \n",i,k,j, B[k*ldb+j]);
+    //printf("ANS:%d-%d-%d %f += %f * %f\n",i,k,j, C[i*ldc+j],A_PART,B[k*ldb+j]);
 }
 
 
