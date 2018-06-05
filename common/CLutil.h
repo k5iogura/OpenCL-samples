@@ -119,9 +119,9 @@ int openCLCreate(cl_context* context, cl_command_queue* queue, cl_device_id *dev
 	cl_uint numPlatforms,numdevices;
 
     // Please Select One Platform to use in list below !
-    //char *use_platform="NVIDIA Corporation";
+    char *use_platform="NVIDIA Corporation";
     //char *use_platform="Intel(R) FPGA OpenCL platform";
-    char *use_platform="Intel(R) Corporation";
+    //char *use_platform="Intel(R) Corporation";
     //char *use_platform="Advanced Micro Devices,Inc.";
 
 	status=clGetPlatformIDs(0,NULL,&numPlatforms);
