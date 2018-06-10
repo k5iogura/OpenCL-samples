@@ -1,0 +1,1 @@
+Compiler Command: aoc -march=emulator -g -v -report -board=c5gt hello_world.cl

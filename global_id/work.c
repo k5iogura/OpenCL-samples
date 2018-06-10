@@ -12,6 +12,8 @@ void main(){
     openCLCreate(&context, &queue, &device);
     openCLCreate_Stage2(context,device,"kernel.cl","global_id",&kernel);
 
+    int X=10;
+    clSetKernelArg(kernel,0,sizeof(cl_int),(void*)&X);
     clEnqueueNDRangeKernel(
     queue,
     kernel,
