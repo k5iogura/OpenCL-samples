@@ -1,0 +1,392 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.001
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.730
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.029
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'fpga_clk_50'
+Slack : 11.754
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.302
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fpga_clk_50'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 1.109
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.375
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.805
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fpga_clk_50'
+Slack : 15.508
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'fpga_clk_50'
+Slack : 0.590
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.953
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.608
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]'
+Slack : 0.892
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 2.224
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.754
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fpga_clk_50'
+Slack : 8.659
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'i2c_scl'
+Slack : 149.900
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 1.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.173
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'fpga_clk_50'
+Slack : 11.665
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fpga_clk_50'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 1.103
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.468
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 6.000
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fpga_clk_50'
+Slack : 15.728
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.373
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'fpga_clk_50'
+Slack : 0.543
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.874
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.613
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.630
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]'
+Slack : 0.892
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 2.203
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.735
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fpga_clk_50'
+Slack : 8.634
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'i2c_scl'
+Slack : 149.927
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 2.957
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.544
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'fpga_clk_50'
+Slack : 14.876
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fpga_clk_50'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 3.693
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.727
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.175
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fpga_clk_50'
+Slack : 16.819
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'fpga_clk_50'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.556
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]'
+Slack : 0.892
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 2.343
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.882
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fpga_clk_50'
+Slack : 8.814
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'i2c_scl'
+Slack : 149.643
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 3.278
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.943
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'fpga_clk_50'
+Slack : 15.333
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fpga_clk_50'
+Slack : 0.159
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 3.742
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 3.825
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 7.511
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fpga_clk_50'
+Slack : 17.223
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'fpga_clk_50'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|pll_write_clk_dq_write_clk'
+Slack : 0.887
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|fpll_0|fpll|vcoph[0]'
+Slack : 0.892
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'system:the_system|system_acl_iface:acl_iface|system_acl_iface_hps:hps|system_acl_iface_hps_hps_io:hps_io|system_acl_iface_hps_hps_io_border:border|hps_sdram:hps_sdram_inst|hps_sdram_pll:pll|afi_clk_write_clk'
+Slack : 0.894
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|acl_kernel_clk|kernel_pll|altera_pll_i|cyclonev_pll|counter[0].output_counter|divclk'
+Slack : 2.343
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'the_system|acl_iface|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.882
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fpga_clk_50'
+Slack : 8.816
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'i2c_scl'
+Slack : 149.632
+TNS   : 0.000
+
+------------------------------------------------------------
+Info: see the "DDR report" for DDR timing results
+------------------------------------------------------------
+------------------------------------------------------------

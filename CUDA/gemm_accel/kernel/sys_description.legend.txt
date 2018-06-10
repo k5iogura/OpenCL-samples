@@ -1,0 +1,4 @@
+   - Global memory start address for interface 0
+   - Global memory end address for interface 0
+   - Global memory start address for interface 1
+   - Global memory end address for interface 1
