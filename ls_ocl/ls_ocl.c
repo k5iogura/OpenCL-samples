@@ -104,11 +104,26 @@ cl_device_id ocl_init (char *target_name) {
   return target_device;
 }
 
-cl_platform_id find_platform(char *name){
-    (void)ocl_init(name);
+void contextQ(cl_device_id device_Id, cl_context *conteXt, cl_command_queue *queUe){
+    cl_int ret;
+    /* Create OpenCL context */
+    *conteXt = clCreateContext (NULL, 1, &device_Id, NULL, NULL, &ret);
+    checkErr(ret,"clCreateContext");
+
+    /* Create Command Queue */
+    *queUe = clCreateCommandQueue (*conteXt, device_Id, 0, &ret);
+    checkErr(ret,"clCreateCommandQueue");
 }
 
-void main(int argc, char **argv){
+cl_platform_id find_platform(char *name){
+    cl_context context;
+    cl_command_queue queue;
+    cl_device_id device_id = ocl_init(name);
+    if(device_id)
+        contextQ(device_id, &context, &queue);
+}
+
+int main(int argc, char **argv){
     int i;
     char *name=NULL;
     for(i=1;i<argc;i++){
@@ -118,4 +133,5 @@ void main(int argc, char **argv){
     }
     if(find_platform(name))
         printf("ls_ocl:found platform as \"%s\"\n",name);
+    exit(0);
 }
