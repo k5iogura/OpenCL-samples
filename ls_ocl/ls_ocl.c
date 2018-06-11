@@ -69,12 +69,14 @@ void checkErr(cl_int err,const char *name)
 	}
 }
 
-void ocl_init () {
+cl_device_id ocl_init (char *target_name) {
   int i,j,k;
   cl_uint ret_num_devices;
   cl_uint ret_num_platforms;
   cl_int ret;
   cl_int ret1,ret2,ret3;
+  cl_platform_id target_platform = NULL;
+  cl_device_id   target_device = NULL;
 
 /* Load the source code containing the kernel*/
 
@@ -97,8 +99,23 @@ void ocl_init () {
       clGetDeviceInfo(device_id[j], CL_DEVICE_LOCAL_MEM_SIZE, sizeof(cl_ulong),&local_mem,NULL);
       printf("\t\tNo.%d-\"%s\" : LOCAL_MEM_SIZE=%lu\n",j,device_name,local_mem);
     }
+    if(target_name && !strcmp(platform_name, target_name) && ret_num_devices>0) target_device = device_id[0];
   }
+  return target_device;
 }
-void main(){
-    ocl_init();
+
+cl_platform_id find_platform(char *name){
+    (void)ocl_init(name);
+}
+
+void main(int argc, char **argv){
+    int i;
+    char *name=NULL;
+    for(i=1;i<argc;i++){
+        if(name) free(name);
+        name=(char*)calloc(1024,sizeof(char));
+        strcpy(name,argv[i]);
+    }
+    if(find_platform(name))
+        printf("ls_ocl:found platform as \"%s\"\n",name);
 }
