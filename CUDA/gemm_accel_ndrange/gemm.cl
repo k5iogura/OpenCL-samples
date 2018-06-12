@@ -1,11 +1,12 @@
+__attribute__((num_compute_units(4)))
 __kernel void gemm_nn(
     int i,
     const int k,
     const int ldc,
     const int ldb,
-    global float *C,
-    global const float *B,
-    global const float *A,
+    global float * restrict C,
+    global const float * restrict B,
+    global const float * restrict A,
     const int lda
 ){
     i = get_global_id(0);
