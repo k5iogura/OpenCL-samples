@@ -17,7 +17,7 @@ else
 
 CC = g++
 ifeq ($(CUDA_DEVICE),1)
-CFLAG = -I /usr/local/include
+CFLAG = -I /usr/local/cuda/include
 LFLAG = -L /usr/local/cuda/lib64
 
 else
